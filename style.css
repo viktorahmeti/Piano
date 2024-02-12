@@ -6,7 +6,7 @@ body{
     margin: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #737c88;
+    background-color: #edebeb;
     display: grid;
     place-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -22,7 +22,7 @@ body{
 .piano-top{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: #4a974a;
+    background-color: #000;
     border: 3px solid black;
     border-bottom: none;
     padding: 10px;
@@ -30,6 +30,7 @@ body{
     gap: 0.5rem;
     align-items: center;
     width: calc(100% + 6px);
+    color: #edebeb;
 }
 
 .piano{
@@ -45,7 +46,7 @@ body{
 }
 
 .white-key{
-    background-color: azure;
+    background-color: #fff;
     position: relative;
     grid-column: span 1;
     overflow: visible;
@@ -85,6 +86,62 @@ body{
     transform: translate(-50%);
     font-size: 1rem;
     color: rgb(157, 155, 155);
+}
+
+#octave{
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#octave::-webkit-slider-runnable-track{
+    background: #f95cf9;
+    border-radius: 0;
+    height: 8px;
+}
+
+#octave:focus::-webkit-slider-runnable-track{
+    background: #f95cf9;
+}
+
+#octave::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 16px;
+    margin-top: -4px;
+    background: #fff;
+    border-radius: 0;
+}
+
+#octave:focus::-webkit-slider-thumb{
+    background: #fff;
+}
+
+
+#octave::-moz-range-track{
+    border: none;
+    background: #f95cf9;
+    border-radius: 0;
+    height: 8px;
+}
+
+#octave:focus::-moz-range-track{
+    background: #f95cf9;
+}
+
+#octave::-moz-range-thumb{
+    border: none;
+    width: 10px;
+    height: 16px;
+    margin-top: -4px;
+    background: #fff;
+    border-radius: 0;
+}
+
+#octave:focus::-moz-range-thumb{
+    background: #fff;
 }
 
 @media screen and (max-width: 400px) {
