@@ -71,21 +71,33 @@ body{
     z-index: 1;
     cursor: pointer;
     pointer-events: all;
-    box-shadow: 2px 2px 4px rgb(128 128 128 / 56%);
+    box-shadow: 2px 2px 4px rgb(1 1 1 / 56%);
 }
 
 .black-key.clicked{
     box-shadow: none;
 }
 
-.white-key::after{
-    content: attr(data-note);
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 1rem;
-    color: rgb(157, 155, 155);
+@media (hover: hover) and (pointer: fine) {
+    .white-key::after{
+        content: attr(data-key);
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 1.1rem;
+        color: rgb(157, 155, 155);
+    }
+    
+    .black-key::after{
+        content: attr(data-key);
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 1.1rem;
+        color: white;
+    }
 }
 
 #octave{
