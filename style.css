@@ -152,6 +152,20 @@ body{
     background: #fff;
 }
 
+#me{
+    font-weight: 500;
+    text-align: right;
+    margin-top: auto;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#me a{
+    color: #fc2af5;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 400px) {
     .piano{
         height: min(200px, 80vh);
