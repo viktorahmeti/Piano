@@ -66,6 +66,7 @@ document.addEventListener('keypress', (event) => {
     //if it's held down return
     if (event.repeat) return;
 
+    //get data
     let character = event.keyCode;
     if(!keyboardToNoteMap.get(character))
         return;
@@ -76,6 +77,7 @@ document.addEventListener('keypress', (event) => {
     if(!note)
         return;
 
+    //the selector for the correct div
     let selector = `[data-note='${note}']`;
     if(octaveOffset)
         selector += `[data-octave-offset='${octaveOffset}']`;
@@ -88,16 +90,6 @@ document.addEventListener('keypress', (event) => {
 })
 
 function playNote(note, octaveOffset = 0){
-    let midi = noteToMidi(note) - (octaveInput.value - 1 + octaveOffset) * 12;
+    let midi = noteToMidiMap.get(note) - (octaveInput.value - 1 + octaveOffset) * 12;
     inst.tone(midi);
-}
-
-function noteToMidi(note){
-    return noteToMidiMap.get(note);
-}
-
-function isInNextOctave(element){
-    if(element.classList.contains('black-key'))
-        element = element.parentElement;
-    return element.nextElementSibling == null;
 }

@@ -51,6 +51,7 @@ body{
     grid-column: span 1;
     overflow: visible;
     cursor: pointer;
+    transition: box-shadow .1s ease;
 }
 
 .white-key:not(:last-child){
@@ -72,6 +73,7 @@ body{
     cursor: pointer;
     pointer-events: all;
     box-shadow: 2px 2px 4px rgb(1 1 1 / 56%);
+    transition: box-shadow .1s ease;
 }
 
 .black-key.clicked{
@@ -79,7 +81,7 @@ body{
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .white-key::after{
+    .white-key::after, .black-key::after{
         content: attr(data-key);
         position: absolute;
         bottom: 5px;
@@ -90,12 +92,6 @@ body{
     }
     
     .black-key::after{
-        content: attr(data-key);
-        position: absolute;
-        bottom: 5px;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 1.1rem;
         color: white;
     }
 }
