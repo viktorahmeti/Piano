@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="musical.min.js"></script>
+    <title>Piano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="piano-container">
+        <div class="piano-top">
+            <label for="octave">Pitch</label>
+            <input id="octave" type="range" min="1" max="7" step="1" value="4">
+        </div>
+
+        <div class="piano" id="piano">
+            <div data-note="C" class="white-key">
+                <div data-note="C#" class="black-key"></div>
+            </div>
+            <div data-note="D" class="white-key">
+                <div data-note="D#" class="black-key"></div>
+            </div>
+            <div data-note="E" class="white-key"></div>
+            <div data-note="F" class="white-key">
+                <div data-note="F#" class="black-key"></div>
+            </div>
+            <div data-note="G" class="white-key">
+                <div data-note="G#" class="black-key"></div>
+            </div>
+            <div data-note="A" class="white-key">
+                <div data-note="A#" class="black-key"></div>
+            </div>
+            <div data-note="B" class="white-key"></div>
+            <div data-note="C" data-octave-offset="1" class="white-key">
+                <div data-note="C#" data-octave-offset="1" class="black-key"></div>
+            </div>
+            <div data-note="D" data-octave-offset="1" class="white-key">
+                <div data-note="D#" data-octave-offset="1" class="black-key"></div>
+            </div>
+            <div data-note="E" data-octave-offset="1" class="white-key"></div>
+        </div>
+    </div>
+
+    <script src="piano.js"></script>
+</body>
+</html>
