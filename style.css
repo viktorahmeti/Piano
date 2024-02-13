@@ -4,8 +4,8 @@
 
 body{
     margin: 0;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: #edebeb;
     display: grid;
     place-content: center;
@@ -156,9 +156,10 @@ body{
     font-weight: 500;
     text-align: right;
     margin-top: auto;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    transform-origin: 100% 50%;
 }
 
 #me a{
@@ -166,8 +167,34 @@ body{
     text-decoration: none;
 }
 
+#pwa-install-btn{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: #fc2af5;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    color: #edebeb;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+#pwa-install-btn.show{
+    display: inline;
+}
+
 @media screen and (max-width: 400px) {
     .piano{
         height: min(200px, 80vh);
+    }
+}
+
+@media screen and (orientation:landscape) {
+    #me{
+        transform: rotate(90deg);
+        bottom: 0;
+        right: 1.5rem;
     }
 }

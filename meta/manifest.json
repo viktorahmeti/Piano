@@ -1,6 +1,6 @@
 {
     "name": "Piano",
-    "short_name": "P",
+    "short_name": "Piano",
     "description": "A simple Piano built with JavaScript. Easy to play with your mouse, touch, or keyboard.",
     "start_url": "../",
     "display": "standalone",
