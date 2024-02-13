@@ -5,7 +5,8 @@
 body{
     margin: 0;
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: calc(100vh + env(safe-area-inset-top));
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     background-color: #edebeb;
     display: grid;
     place-content: center;
@@ -157,8 +158,8 @@ body{
     text-align: right;
     margin-top: auto;
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
+    right: calc(env(safe-area-inset-right) + 0.5rem);
     transform-origin: 100% 50%;
 }
 
@@ -194,7 +195,7 @@ body{
 @media screen and (orientation:landscape) {
     #me{
         transform: rotate(90deg);
-        bottom: 0;
-        right: 1.5rem;
+        bottom: calc(env(safe-area-inset-bottom));
+        right: calc(env(safe-area-inset-right) + 1.5rem);
     }
 }
