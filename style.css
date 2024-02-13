@@ -17,6 +17,16 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+@media all and (display-mode: standalone) {
+    html{
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+    }
+
+    body{
+        inset: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+    }
+}
+
 .piano-container{
     width: min(90vw, 600px);
     display: flex;
@@ -199,7 +209,7 @@ body{
 @media screen and (orientation:landscape) {
     #me{
         transform: rotate(90deg);
-        bottom: calc(env(safe-area-inset-bottom));
-        right: calc(env(safe-area-inset-right) + 1.5rem);
+        bottom: 0;
+        right: 1.5rem;
     }
 }
